@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="app-container conversation-open">
+        <!-- Sidebar for Navigation and Controls -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon"><i class="fa-solid fa-ticket-simple"></i></div>
+                <span class="logo-text">Supportly</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="active">
+                            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span class="nav-text">Inbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                            <span class="nav-text">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 16v-2m0-10v2m0 6v2M6 12H4m16 0h-2m-10 0h2m6 0h2M9 17l-2 2M15 7l2-2M7 7l2 2M17 17l-2-2M9 7l-2-2M15 17l2 2"></path></svg>
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="new-ticket-btn">
+                <span>New Ticket</span>
+            </a>
+        </aside>
+
+
+        <!-- Wrapper for Main Content and Conversation Sidebar -->
+        <div class="content-wrapper">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Inbox</h1>
+                <div class="search-and-user">
+                    <div class="search-wrapper">
+                         <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <input type="text" class="search-input" placeholder="Search tickets...">
+                    </div>
+                    <div class="user-profile"><i class="fa-solid fa-user"></i></div>
+                </div>
+            </header>
+
+            <section class="filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Open</button>
+                <button class="filter-btn">In Progress</button>
+                <button class="filter-btn">Closed</button>
+            </section>
+            
+            <div class="tickets-container">
+                <section class="ticket-list">
+                    <!-- Ticket 1: High Priority, Open -->
+                    <article class="ticket-card active" tabindex="0">
+                        <div class="agent-avatar" style="background-color: #fecaca; color: #b91c1c;">JS</div>
+                        <div class="ticket-info">
+                            <p class="subject">URGENT: Server is down and unresponsive</p>
+                            <p class="preview">The main production server went offline about 15...</p>
+                        </div>
+                        <div class="customer-name">Jane Smith</div>
+                        <span class="status-label open">Open</span>
+                        <span class="priority-label high">High</span>
+                    </article>
+
+                    <!-- Ticket 2: Medium Priority, In Progress -->
+                    <article class="ticket-card" tabindex="0">
+                        <div class="agent-avatar" style="background-color: #fed7aa; color: #9a3412;">AM</div>
+                        <div class="ticket-info">
+                            <p class="subject">Billing question about last month's invoice</p>
+                            <p class="preview">Hi there, I was looking at invoice #INV-2025-09...</p>
+                        </div>
+                        <div class="customer-name">Alex Miller</div>
+                        <span class="status-label progress">In Progress</span>
+                        <span class="priority-label medium">Medium</span>
+                    </article>
+                    
+                    <!-- Ticket 3: Low Priority, Closed -->
+                    <article class="ticket-card" tabindex="0">
+                        <div class="agent-avatar" style="background-color: #bbf7d0; color: #166534;">CW</div>
+                        <div class="ticket-info">
+                            <p class="subject">Feature Request: Dark Mode</p>
+                            <p class="preview">Our team would absolutely love to see a dark...</p>
+                        </div>
+                        <div class="customer-name">Casey Williams</div>
+                        <span class="status-label closed">Closed</span>
+                        <span class="priority-label low">Low</span>
+                    </article>
+                    
+                    <!-- Ticket 4: Medium Priority, Open -->
+                    <article class="ticket-card" tabindex="0">
+                        <div class="agent-avatar" style="background-color: #bae6fd; color: #075985;">BD</div>
+                        <div class="ticket-info">
+                            <p class="subject">Issue with API rate limiting</p>
+                            <p class="preview">We seem to be hitting our API rate limit...</p>
+                        </div>
+                        <div class="customer-name">Ben Davis</div>
+                        <span class="status-label open">Open</span>
+                        <span class="priority-label medium">Medium</span>
+                    </article>
+                    
+                    <!-- Ticket 5: High Priority, In Progress -->
+                    <article class="ticket-card" tabindex="0">
+                        <div class="agent-avatar" style="background-color: #ddd6fe; color: #5b21b6;">LG</div>
+                        <div class="ticket-info">
+                            <p class="subject">Cannot access my account - Password reset fails</p>
+                            <p class="preview">I've tried resetting my password three...</p>
+                        </div>
+                        <div class="customer-name">Laura Green</div>
+                        <span class="status-label progress">In Progress</span>
+                        <span class="priority-label high">High</span>
+                    </article>
+                </section>
+            </div>
+        </main>
+
+
+
+         <!-- Conversation Sidebar -->
+            <aside class="conversation-sidebar">
+                <header class="conversation-header">
+                    <h2 class="subject">URGENT: Server is down...</h2>
+                    <p class="customer-info">From: Jane Smith (jane.smith@example.com)</p>
+                </header>
+                <div class="conversation-body">
+                    <div class="message agent">
+                        <div class="agent-avatar" style="background-color: #ddd6fe; color: #5b21b6;">LG</div>
+                        <div class="message-content">
+                            <p class="message-sender">Laura Green (Support)</p>
+                            <p class="message-text">Hi Jane, I'm looking into the server issue right now. Can you confirm if you're seeing a 503 error?</p>
+                            <p class="message-timestamp">2 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="message customer">
+                        <div class="message-content">
+                            <p class="message-sender">Jane Smith</p>
+                            <p class="message-text">The main production server went offline about 15 minutes ago. We need immediate assistance. We are not getting a specific error code, just a timeout.</p>
+                            <p class="message-timestamp">15 minutes ago</p>
+                        </div>
+                        <div class="agent-avatar" style="background-color: #fecaca; color: #b91c1c;">JS</div>
+                    </div>
+                </div>
+                <div class="reply-box">
+                    <textarea placeholder="Type your reply here..."></textarea>
+                    <button>Send Reply</button>
+                </div>
+            </aside>
+         </div>
+    </div>
+
+
+</body>
+</html>
